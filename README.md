@@ -64,6 +64,8 @@ Access the application at `http://127.0.0.1:8000/`.
 3. **Engage with Posts**: Like and comment on posts.
 4. **View Analytics**: See user activity statistics.
 
+## Screenshots
+
 ## Project Structure
 ```
 /social_media_dashboard
@@ -91,16 +93,6 @@ The platform fetches Facebook posts via the Graph API. Make sure to generate an 
 
 ### Fetch Twitter Posts
 Uses Twitter API v2 to retrieve user tweets.
-
-### Schedule Posts
-The system uses Celery and Redis for handling scheduled posts. Make sure to install Redis and configure Celery accordingly.
-```bash
-pip install celery redis
-```
-To run Celery:
-```bash
-celery -A social_dashboard worker --loglevel=info
-```
 
 ## Deployment
 For production, use a robust database like PostgreSQL and configure a WSGI server such as Gunicorn.
