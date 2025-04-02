@@ -1,0 +1,41 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+<div class="container-home">
+<div class="container">
+    <h2>Posts</h2>
+    <a class="create-post-btn" href="{% url 'create_post' %}">Create New Post</a>
+
+    <div class="recent-posts">
+        <h3>Recent Posts</h3>
+        <ul>
+            {% for post in posts %}
+                <li>
+                    <p><strong>{{ post.user.username }}</strong>: {{ post.content }}</p>
+                    <p>Likes: {{ post.likes.count }} | Comments: {{ post.comments.count }}</p>
+                    <a href="{% url 'like_post' post.id %}">Like</a>
+                    <a href="{% url 'comment_post' post.id %}">Comment</a>
+
+                    <div class="comments-section">
+                        <h4 class="comments-heading">Comments</h4>
+                        <ul>
+                            {% for comment in post.comments.all %}
+                                <li>
+                                    <p><strong>{{ comment.user.username }}</strong>: {{ comment.content }}</p>
+                                </li>
+                            {% empty %}
+                                <li>No comments yet.</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% comment %} <div class="comments-section">
+        <h4 class="comments-heading">Comments Section</h4>
+        <!-- Your comments will go here -->
+    </div> {% endcomment %}
+</div>
+</div>
+{% endblock %}

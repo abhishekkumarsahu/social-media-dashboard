@@ -1,0 +1,13 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+<div class="post-container">
+    <h2 class="post-title">Create Post</h2>
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="post-button">Post</button>
+    </form>
+    <a href="{% url 'home' %}" class="back-link">Back</a>
+</div>
+{% endblock %}
+
