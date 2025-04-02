@@ -1,0 +1,29 @@
+{% extends "dashboard/base.html" %}
+{% load static %} 
+{% block content %}
+<div class="profile-box">
+<div class="profile-container">
+    <div class="profile-card">
+        <div class="profile-image">
+            <img src="{% static 'dashboard/Profile_img.avif' %}" alt="Profile Image">
+        </div>
+        <div class="profile-info">
+            <h2>@{{ user.username }}</h2>
+            {% comment %} <p>Web Developer</p> {% endcomment %}
+        </div>
+    </div>
+    <div class="details-section">
+        <h3>Profile Details</h3>
+        <p><strong>Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+        <p><strong>Age:</strong> {{ user.age }}</p>
+        <p><strong>Mobile:</strong> {{ user.mobile }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Address:</strong> {{ user.address }}</p>
+    </div>
+    <div class="footer">
+        <!-- <p>Made with ❤️ by Learning Robo</p> -->
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
+</div>
+</div>
+{% endblock %}

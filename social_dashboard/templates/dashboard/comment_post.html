@@ -1,0 +1,11 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+<h2>Comment on Post</h2>
+<p><strong>{{ post.user.username }}</strong>: {{ post.content }}</p>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Comment</button>
+</form>
+<a href="{% url 'home' %}">Back</a>
+{% endblock %}

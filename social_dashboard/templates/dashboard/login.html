@@ -1,0 +1,21 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+<div class="login box">
+    <div class="login-container">
+        <h2>Login</h2>
+        {% if messages %}
+            <ul class="error-messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form method="POST" novalidate>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+        <a href="{% url 'register' %}">Don't have an account? Register</a>
+    </div>
+</div>
+{% endblock %}

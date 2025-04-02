@@ -1,0 +1,52 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+<h2 class="dashboard-title">Dashboard Analytics</h2>
+
+<div class="dashboard-container">
+    <div class="stats-box">
+        <p><strong>Total Posts:</strong> {{ total_posts }}</p>
+        <p><strong>Total Likes:</strong> {{ total_likes }}</p>
+        <p><strong>Total Comments:</strong> {{ total_comments }}</p>
+    </div>
+
+    <div class="top-users-box">
+        <h3>Top Users (By Posts)</h3>
+        <ul>
+            {% for user in top_users %}
+                <li>{{ user.user__username }} - {{ user.post_count }} posts</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="recent-activity-box">
+        <h3>Recent Activity</h3>
+        <div class="activity-section">
+            <h4>Recent Posts</h4>
+            <ul>
+                {% for post in recent_posts %}
+                    <li>{{ post.user.username }}: {{ post.content }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="activity-section">
+            <h4>Recent Likes</h4>
+            <ul>
+                {% for like in recent_likes %}
+                    <li>{{ like.user.username }} liked a post</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="activity-section">
+            <h4>Recent Comments</h4>
+            <ul>
+                {% for comment in recent_comments %}
+                    <li>{{ comment.user.username }} commented: "{{ comment.content }}"</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

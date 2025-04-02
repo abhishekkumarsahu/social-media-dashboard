@@ -1,0 +1,10 @@
+{% extends "dashboard/base.html" %}
+
+{% block content %}
+{% for tweet in tweets %}
+    <div>
+        <p>{{ tweet.tweet_text }}</p>
+        <p>{{ tweet.published_date }}</p>
+    </div>
+{% endfor %}
+{% endblock%}
