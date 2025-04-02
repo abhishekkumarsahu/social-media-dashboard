@@ -24,10 +24,10 @@ if __name__ == '__main__':
 
 
 # Replace these with your own credentials
-consumer_key = 'cPvZ7cMkuSBKITi4z8m7Gt8Xc'
-consumer_secret = 'U09Xc41yfqkZfGya1oc46xtsjeBHzq0jU7OhqTlPPbFzE1iIEI'
-access_token = '1905320725264924672-SZHa0qqcZ64SAl5qfLX1WdP3iugOP7'
-access_token_secret = 'isegGXLSwxFvv0glQbIi5TAEMqz29oHFiwRdhemIIACRq'
+consumer_key = 'your_consumer_key'
+consumer_secret = 'your_secret_key'
+access_token = 'your_access_token'
+access_token_secret = 'your_access_token_key'
 
 # Authentication
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
