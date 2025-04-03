@@ -67,10 +67,25 @@ Access the application at `http://127.0.0.1:8000/`.
 ## Screenshots
 
 ### Homepage:
-![Homepage Screenshot](screenshot/Screenshot01.png)
+![Homepage Screenshot](social_dashboard/screenshot/Screenshot01.png)
+
+### Signup Page:
+![Homepage Screenshot](social_dashboard/screenshot/Screenshot03.png)
+
+### Login Page:
+![Homepage Screenshot](social_dashboard/screenshot/Screenshot02.png)
 
 ### Profile Page:
-![Profile Screenshot](screenshot/Screenshot02.png)
+![Profile Screenshot](social_dashboard/screenshot/Screenshot04.png)
+
+### Create Post Page
+![Homepage Screenshot](social_dashboard/screenshot/Screenshot05.png)
+
+### Analytics Page
+![Homepage Screenshot](social_dashboard/screenshot/Screenshot06.png)
+
+![Homepage Screenshot](social_dashboard/screenshot/Screenshot07.png)
+
 
 ## Project Structure
 ```
