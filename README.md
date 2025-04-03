@@ -67,10 +67,10 @@ Access the application at `http://127.0.0.1:8000/`.
 ## Screenshots
 
 ### Homepage:
-![Homepage Screenshot](screenshots/Screenshot01.png)
+![Homepage Screenshot](screenshot/Screenshot01.png)
 
 ### Profile Page:
-![Profile Screenshot](screenshots/Screenshot02.png)
+![Profile Screenshot](screenshot/Screenshot02.png)
 
 ## Project Structure
 ```
