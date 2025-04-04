@@ -46,7 +46,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 6. Create a Superuser (Optional)
+### 6. Create a Superuser
 ```bash
 python manage.py createsuperuser
 ```
@@ -104,16 +104,17 @@ Access the application at `http://127.0.0.1:8000/`.
 |   ├── urls.py               # URL routing(project)
 │── db.sqlite3                # SQLite database (for development)
 │── manage.py                 # Django management script
+/venv                         # Virtual Environment
 │── requirements.txt          # Dependencies list
-│── README.md                 # Project documentation
+/ README.md                 # Project documentation
 ```
 
 ## API Integration
 ### Fetch Facebook Posts
-The platform fetches Facebook posts via the Graph API. Make sure to generate an access token and configure it in the `.env` file.
+The platform fetches Facebook posts via the Graph API. Make sure to generate an access token and configure it in the `settings.py` file.
 
 ### Fetch Twitter Posts
-Uses Twitter API v2 to retrieve user tweets.
+Uses Tweepy to fetch tweets from a specified Twitter user. Ensure you have the tweepy library installed (pip install tweepy) and replace "YOUR_BEARER_TOKEN" with your actual Twitter API bearer token.
 
 ## Deployment
 For production, use a robust database like PostgreSQL and configure a WSGI server such as Gunicorn.
